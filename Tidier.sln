@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{09627756-0241-409B-A83F-59220BC700CF}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		readme.md = readme.md
+		TidyNet.vsmdi = TidyNet.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tidier", "Tidier\Tidier.csproj", "{63395822-8A82-4639-82D5-7FFD2E331C7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TidyNet", "TidyNet\TidyNet.csproj", "{C9B7AEFC-11BF-4902-AB1C-055E87479ACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TidyTests", "TidyTests\TidyTests.csproj", "{47AA1897-639F-45CE-A98A-560DA9B85D20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9B7AEFC-11BF-4902-AB1C-055E87479ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B7AEFC-11BF-4902-AB1C-055E87479ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9B7AEFC-11BF-4902-AB1C-055E87479ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9B7AEFC-11BF-4902-AB1C-055E87479ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47AA1897-639F-45CE-A98A-560DA9B85D20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47AA1897-639F-45CE-A98A-560DA9B85D20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47AA1897-639F-45CE-A98A-560DA9B85D20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47AA1897-639F-45CE-A98A-560DA9B85D20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63395822-8A82-4639-82D5-7FFD2E331C7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63395822-8A82-4639-82D5-7FFD2E331C7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63395822-8A82-4639-82D5-7FFD2E331C7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63395822-8A82-4639-82D5-7FFD2E331C7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Tidier.vsmdi
+	EndGlobalSection
+EndGlobal
