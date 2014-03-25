@@ -48,6 +48,7 @@
             this.btnAddFiles = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.statusStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabDirectory.SuspendLayout();
@@ -107,6 +108,7 @@
             // tabDirectory
             // 
             this.tabDirectory.CausesValidation = false;
+            this.tabDirectory.Controls.Add(this.progressBar1);
             this.tabDirectory.Controls.Add(this.btnScan);
             this.tabDirectory.Controls.Add(this.dataMessages);
             this.tabDirectory.Controls.Add(this.btnDirectoryPicker);
@@ -267,6 +269,17 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar1.Location = new System.Drawing.Point(18, 246);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(993, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar1.TabIndex = 8;
+            this.progressBar1.Visible = false;
+            // 
             // Form1
             // 
             this.AllowDrop = true;
@@ -316,6 +329,7 @@
         private System.Windows.Forms.CheckBox chkBackup;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtExtension;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 

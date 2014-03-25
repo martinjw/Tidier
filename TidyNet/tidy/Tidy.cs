@@ -207,10 +207,14 @@ namespace TidyNet
         /// <returns></returns>
         public virtual TidyMessageCollection Scan(string directory)
         {
-            var files = Directory.GetFiles(directory, "*" + Options.Extension, SearchOption.AllDirectories);
+            var extension = Options.Extension;
+            if (string.IsNullOrEmpty(extension)) extension = ".html";
+            var files = Directory.GetFiles(directory, "*" + extension, SearchOption.AllDirectories);
             var messageCollection = new TidyMessageCollection();
             foreach (var file in files)
             {
+                //filter patterns are not reliable because they may match 8,3 shortnames.
+                if (!file.EndsWith(extension, StringComparison.OrdinalIgnoreCase)) continue;
                 Load(file, messageCollection);
             }
             return messageCollection;

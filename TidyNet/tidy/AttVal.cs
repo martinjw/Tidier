@@ -210,6 +210,12 @@ namespace TidyNet
                 //html5 so allowed
                 return attribute;
             }
+            if (attribute == null && _attribute.StartsWith("ng-", StringComparison.OrdinalIgnoreCase))
+            {
+                //angular, which should be html5
+                lexer.versions &= HtmlVersion.Html5;
+                return null;
+            }
             if (attribute != null)
             {
                 /* title is vers 2.0 for A and LINK otherwise vers 4.0 */

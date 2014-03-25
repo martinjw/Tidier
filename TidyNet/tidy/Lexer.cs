@@ -79,11 +79,11 @@ namespace TidyNet
 
         /* 
         lexer character buffer
-		
+        
         parse tree nodes span onto this buffer
         which contains the concatenated text
         contents of all of the elements.
-		
+        
         lexsize must be reset for each file.
         */
         public byte[] lexbuf; /* byte buffer of UTF-8 chars */
@@ -320,11 +320,11 @@ namespace TidyNet
         No longer attempts to insert missing ';' for unknown
         enitities unless one was present already, since this
         gives unexpected results.
-		
+        
         For example:   <a href="something.htm?foo&bar&fred">
         was tidied to: <a href="something.htm?foo&amp;bar;&amp;fred;">
         rather than:   <a href="something.htm?foo&amp;bar&amp;fred">
-		
+        
         My thanks for Maurice Buxton for spotting this.
         */
         public virtual void ParseEntity(short mode)
@@ -1310,7 +1310,7 @@ namespace TidyNet
 
         /*
         modes for GetToken()
-		
+        
         MixedContent   -- for elements which don't accept PCDATA
         Preformatted       -- white space preserved as is
         IgnoreMarkup       -- for CDATA elements such as script, style
@@ -2155,19 +2155,19 @@ namespace TidyNet
 
         /*
         parser for ASP within start tags
-		
+        
         Some people use ASP for to customize attributes
         Tidy isn't really well suited to dealing with ASP
         This is a workaround for attributes, but won't
         deal with the case where the ASP is used to tailor
         the attribute value. Here is an example of a work
         around for using ASP in attribute values:
-		
+        
         href="<%=rsSchool.Fields("ID").Value%>"
-		
+        
         where the ASP that generates the attribute value
         is masked from Tidy by the quotemarks.
-		
+        
         */
         public virtual Node ParseAsp()
         {
@@ -2681,7 +2681,7 @@ namespace TidyNet
                 /*
                 there is almost certainly a missing trailling quote mark
                 as we have see too many newlines, < or > characters.
-				
+                
                 an exception is made for Javascript attributes and the
                 javascript URL scheme which may legitimately include < and >
                 */
@@ -2798,15 +2798,15 @@ namespace TidyNet
         push a copy of an inline node onto stack
         but don't push if implicit or OBJECT or APPLET
         (implicit tags are ones generated from the istack)
-		
+        
         One issue arises with pushing inlines when
         the tag is already pushed. For instance:
-		
+        
         <p><em>text
         <p><em>more text
-		
+        
         Shouldn't be mapped to
-		
+        
         <p><em>text</em></p>
         <p><em><em>more text</em></em>
         */
@@ -2912,13 +2912,13 @@ namespace TidyNet
         such as P, TD, TH, DIV, PRE etc. This procedure is
         called at the start of ParseBlock. when the inline
         stack is not empty, as will be the case in:
-		
+        
         <i><h1>italic heading</h1></i>
-		
+        
         which is then treated as equivalent to
-		
+        
         <h1><i>italic heading</i></h1>
-		
+        
         This is implemented by setting the lexer into a mode
         where it gets tokens from the inline stack rather than
         from the input stream.
@@ -3189,16 +3189,16 @@ namespace TidyNet
         private const string XHTML_NAMESPACE = "http://www.w3.org/1999/xhtml";
 
         private static Lexer.W3CVersionInfo[] W3CVersion = new Lexer.W3CVersionInfo[]
-			{
-				new W3CVersionInfo("HTML 4.01", "XHTML 1.0 Strict", voyager_strict, HtmlVersion.Html40Strict),
-				new W3CVersionInfo("HTML 4.01 Transitional", "XHTML 1.0 Transitional", voyager_loose, HtmlVersion.Html40Loose), 
-				new W3CVersionInfo("HTML 4.01 Frameset", "XHTML 1.0 Frameset", voyager_frameset, HtmlVersion.Frames),
-				new W3CVersionInfo("HTML 4.0", "XHTML 1.0 Strict", voyager_strict, HtmlVersion.Html40Strict),
-				new W3CVersionInfo("HTML 4.0 Transitional", "XHTML 1.0 Transitional", voyager_loose, HtmlVersion.Html40Loose),
-				new W3CVersionInfo("HTML 4.0 Frameset", "XHTML 1.0 Frameset", voyager_frameset, HtmlVersion.Frames),
-				new W3CVersionInfo("HTML 3.2", "XHTML 1.0 Transitional", voyager_loose, HtmlVersion.Html32),
-				new W3CVersionInfo("HTML 2.0", "XHTML 1.0 Strict", voyager_strict, HtmlVersion.Html20)
-			};
+            {
+                new W3CVersionInfo("HTML 4.01", "XHTML 1.0 Strict", voyager_strict, HtmlVersion.Html40Strict),
+                new W3CVersionInfo("HTML 4.01 Transitional", "XHTML 1.0 Transitional", voyager_loose, HtmlVersion.Html40Loose), 
+                new W3CVersionInfo("HTML 4.01 Frameset", "XHTML 1.0 Frameset", voyager_frameset, HtmlVersion.Frames),
+                new W3CVersionInfo("HTML 4.0", "XHTML 1.0 Strict", voyager_strict, HtmlVersion.Html40Strict),
+                new W3CVersionInfo("HTML 4.0 Transitional", "XHTML 1.0 Transitional", voyager_loose, HtmlVersion.Html40Loose),
+                new W3CVersionInfo("HTML 4.0 Frameset", "XHTML 1.0 Frameset", voyager_frameset, HtmlVersion.Frames),
+                new W3CVersionInfo("HTML 3.2", "XHTML 1.0 Transitional", voyager_loose, HtmlVersion.Html32),
+                new W3CVersionInfo("HTML 2.0", "XHTML 1.0 Strict", voyager_strict, HtmlVersion.Html20)
+            };
 
         /* used to classify chars for lexical purposes */
         private static int[] lexmap = new int[128];

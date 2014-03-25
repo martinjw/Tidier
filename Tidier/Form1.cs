@@ -65,31 +65,45 @@ namespace Tidier
             Cursor.Current = Cursors.WaitCursor;
             toolStripStatusLabel1.Text = "Working";
             btnScan.Visible = false;
+            progressBar1.Visible = true;
             dataMessages.Visible = false;
 
             var tidy = new Tidy();
             tidy.InitOptions();
-            tidy.Options.Extension = txtExtension.Text.Trim();
-            var results = tidy.Scan(dir);
-
-            var sb = new StringBuilder();
-            var count = 0;
-            foreach (var result in results.Where(x => x.Level != MessageLevel.Info))
+            var extension = txtExtension.Text.Trim();
+            if (string.IsNullOrEmpty(extension)) extension = ".html";
+            tidy.Options.Extension = extension;
+            var bw = new BackgroundWorker();
+            bw.DoWork += (s, ea) =>
+                    {
+                        ea.Result = tidy.Scan(dir);
+                    };
+            bw.RunWorkerCompleted += (s, ea) =>
             {
-                count++;
-                sb.AppendLine(result.Filename + " \t" + result.Line + ":" + result.Column + " \t" + result.Message);
-            }
-            Console.WriteLine(count + " issues found");
+                progressBar1.Visible = false;
+                if (ea.Error == null)
+                {
+                    var results = (TidyMessageCollection)ea.Result;
+                    var count = results.Count;
+                    if (count > 0)
+                    {
+                        //for a large result set this will take a second or two
+                        _messageHelper.AddMessages(results.Where(x => x.Level != MessageLevel.Info));
+                        dataMessages.Visible = true;
+                    }
 
-            if (count > 0)
-            {
-                _messageHelper.AddMessages(results.Where(x => x.Level != MessageLevel.Info));
-                dataMessages.Visible = true;
-            }
+                    toolStripStatusLabel1.Text = count + " messages. Double click row to open each file.";
 
-            toolStripStatusLabel1.Text = count + " found. Double click to open files.";
-            btnScan.Visible = true;
-            Cursor.Current = Cursors.Default;
+                }
+                else
+                {
+                    toolStripStatusLabel1.Text = "Error trying to scan files. " + ea.Error.Message;
+                }
+                btnScan.Visible = true;
+                Cursor.Current = Cursors.Default;
+            };
+            bw.RunWorkerAsync();
+
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
