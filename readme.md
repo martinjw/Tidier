@@ -44,6 +44,7 @@ Because of the origins of this code, it's not the greatest quality and certainly
 Even my bits (windows forms...) are old. But with the HTML5 additions, it works well enough. 
 
 There are alternatives to this library. There are wrappers around newer versions of the Tidy binaries eg https://github.com/markbeaton/TidyManaged
+There are newer HTML5 parsers such as Gumbo, which also have c# bindings: https://github.com/rgripper/GumboBindings , Nuget Gumbo.Wrappers
 You could also use Html Agility Pack https://htmlagilitypack.codeplex.com/
 
 ##API

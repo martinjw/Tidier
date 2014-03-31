@@ -83,17 +83,7 @@ namespace Tidier
                 progressBar1.Visible = false;
                 if (ea.Error == null)
                 {
-                    var results = (TidyMessageCollection)ea.Result;
-                    var count = results.Count;
-                    if (count > 0)
-                    {
-                        //for a large result set this will take a second or two
-                        _messageHelper.AddMessages(results.Where(x => x.Level != MessageLevel.Info));
-                        dataMessages.Visible = true;
-                    }
-
-                    toolStripStatusLabel1.Text = count + " messages. Double click row to open each file.";
-
+                    DisplayMessages(ea);
                 }
                 else
                 {
@@ -103,6 +93,29 @@ namespace Tidier
                 Cursor.Current = Cursors.Default;
             };
             bw.RunWorkerAsync();
+
+        }
+
+        private void DisplayMessages(RunWorkerCompletedEventArgs ea)
+        {
+            toolStripStatusLabel1.Text = "Displaying...";
+            Refresh();
+            try
+            {
+                var results = (TidyMessageCollection)ea.Result;
+                var count = results.Count;
+                if (count > 0)
+                {
+                    //for a large result set this will take a second or two
+                    _messageHelper.AddMessages(results.Where(x => x.Level != MessageLevel.Info));
+                    dataMessages.Visible = true;
+                }
+                toolStripStatusLabel1.Text = count + " messages. Double click row to open each file.";
+            }
+            catch (Exception e)
+            {
+                toolStripStatusLabel1.Text = e.Message;
+            }
 
         }
 

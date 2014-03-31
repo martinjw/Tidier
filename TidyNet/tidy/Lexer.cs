@@ -2992,6 +2992,9 @@ namespace TidyNet
             if (element.Type == Node.TextNode)
                 return true;
 
+            if (Options.AllowEmptyElements)
+                return false;
+
             if (element.Content != null)
                 return false;
 

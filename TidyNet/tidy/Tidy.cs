@@ -197,6 +197,7 @@ namespace TidyNet
             Options.LogicalEmphasis = true; //change <i> to <em> and <b> to <strong>
             Options.WarnPresentational = true;
             Options.SuppressInfoMessages = true;
+            Options.AllowEmptyElements = true; //we want to allow hidden spans etc
             //Options.DocType = DocType.Html5;
         }
 

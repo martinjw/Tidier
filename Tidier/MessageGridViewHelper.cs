@@ -11,6 +11,7 @@ namespace Tidier
     class MessageGridViewHelper
     {
         private readonly SortableBindingList<TidyMessage> _messageList = new SortableBindingList<TidyMessage>();
+        private DataGridView _gv;
 
         /// <summary>
         /// Initializes the DataGridView. Call this in Form1_Load.
@@ -18,6 +19,7 @@ namespace Tidier
         /// <param name="gv">The DataGridView.</param>
         public void Init(DataGridView gv)
         {
+            _gv = gv;
             gv.AllowUserToOrderColumns = true;
             //select a entire row, or a range or rows
             gv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -127,11 +129,17 @@ namespace Tidier
 
         public void AddMessages(IEnumerable<TidyMessage> messages)
         {
+            _gv.SuspendLayout();
+            _gv.CellFormatting -= gv_CellFormatting;
+            _gv.DataBindingComplete -= gv_DataBindingComplete;
             _messageList.Clear();
             foreach (var tidyMessage in messages)
             {
                 _messageList.Add(tidyMessage);
             }
+            _gv.CellFormatting += gv_CellFormatting;
+            _gv.DataBindingComplete += gv_DataBindingComplete;
+            _gv.ResumeLayout();
         }
     }
 }

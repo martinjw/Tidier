@@ -927,5 +927,12 @@ namespace TidyNet
         /// <c>true</c> if suppress information messages; otherwise, <c>false</c>.
         /// </value>
         public bool SuppressInfoMessages { get; set; }
+        /// <summary>
+        /// Gets or sets a value indicating whether to allow empty elements (eg span). <seealso cref="DropEmptyParas"/>
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if allow empty elements; otherwise, <c>false</c>.
+        /// </value>
+        public bool AllowEmptyElements { get; set; }
     }
 }
