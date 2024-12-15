@@ -1,8 +1,6 @@
-using System;
-
 namespace TidyNet.Dom
 {
-	public enum NodeType : short
+    public enum NodeType : short
 	{
 		/// <summary> The node is an <code>Element</code>.</summary>
 		ELEMENT_NODE = 1,

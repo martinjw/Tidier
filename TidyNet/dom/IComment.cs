@@ -1,5 +1,4 @@
-using System;
-	
+
 /*
 * Copyright (c) 2000 World Wide Web Consortium,
 * (Massachusetts Institute of Technology, Institut National de
@@ -13,14 +12,14 @@ using System;
 */
 namespace TidyNet.Dom
 {
-	/// <summary> This interface inherits from <code>CharacterData</code> and represents the 
-	/// content of a comment, i.e., all the characters between the starting '
-	/// <code>&lt;!--</code>' and ending '<code>--&gt;</code>'. Note that this is 
-	/// the definition of a comment in XML, and, in practice, HTML, although some 
-	/// HTML tools may implement the full SGML comment structure.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
-	/// </summary>
-	internal interface IComment : ICharacterData
+    /// <summary> This interface inherits from <code>CharacterData</code> and represents the 
+    /// content of a comment, i.e., all the characters between the starting '
+    /// <code>&lt;!--</code>' and ending '<code>--&gt;</code>'. Note that this is 
+    /// the definition of a comment in XML, and, in practice, HTML, although some 
+    /// HTML tools may implement the full SGML comment structure.
+    /// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+    /// </summary>
+    internal interface IComment : ICharacterData
 	{
 	}
 }

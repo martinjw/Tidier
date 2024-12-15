@@ -1,9 +1,6 @@
 using System;
 using System.IO;
-using System.Configuration;
-using System.Collections;
 using System.Text;
-using System.Windows.Forms;
 using TidyNet.Dom;
 
 /*
@@ -198,7 +195,7 @@ namespace TidyNet
             Options.WarnPresentational = true;
             Options.SuppressInfoMessages = true;
             Options.AllowEmptyElements = true; //we want to allow hidden spans etc
-            //Options.DocType = DocType.Html5;
+            Options.DocType = DocType.Html5;
         }
 
         /// <summary>

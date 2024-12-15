@@ -1,5 +1,4 @@
-using System;
-	
+
 /*
 * Copyright (c) 2000 World Wide Web Consortium,
 * (Massachusetts Institute of Technology, Institut National de
@@ -13,12 +12,12 @@ using System;
 */
 namespace TidyNet.Dom
 {
-	/// <summary> The <code>DOMImplementation</code> interface provides a number of methods 
-	/// for performing operations that are independent of any particular instance 
-	/// of the document object model.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
-	/// </summary>
-	internal interface IDomImplementation
+    /// <summary> The <code>DOMImplementation</code> interface provides a number of methods 
+    /// for performing operations that are independent of any particular instance 
+    /// of the document object model.
+    /// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+    /// </summary>
+    internal interface IDomImplementation
 	{
 		/// <summary> Test if the DOM implementation implements a specific feature.
 		/// </summary>

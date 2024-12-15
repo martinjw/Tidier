@@ -1,5 +1,4 @@
 using System;
-using TidyNet.Dom;
 
 namespace TidyNet
 {

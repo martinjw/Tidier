@@ -810,7 +810,10 @@ namespace TidyNet
                 sysid = string.Empty;
             }
 
-            FixHtmlNameSpace(root, namespace_Renamed);
+            if (Options.DocType != TidyNet.DocType.Html5)
+            {
+                FixHtmlNameSpace(root, namespace_Renamed);
+            }
 
             if (doctype == null)
             {

@@ -1,5 +1,4 @@
-using System;
-	
+
 /*
 * Copyright (c) 2000 World Wide Web Consortium,
 * (Massachusetts Institute of Technology, Institut National de
@@ -13,18 +12,18 @@ using System;
 */
 namespace TidyNet.Dom
 {
-	/// <summary> Objects implementing the <code>NamedNodeMap</code> interface are used to 
-	/// represent collections of nodes that can be accessed by name. Note that 
-	/// <code>NamedNodeMap</code> does not inherit from <code>NodeList</code>; 
-	/// <code>NamedNodeMaps</code> are not maintained in any particular order. 
-	/// Objects contained in an object implementing <code>NamedNodeMap</code> may 
-	/// also be accessed by an ordinal index, but this is simply to allow 
-	/// convenient enumeration of the contents of a <code>NamedNodeMap</code>, 
-	/// and does not imply that the DOM specifies an order to these Nodes. 
-	/// <p><code>NamedNodeMap</code> objects in the DOM are live.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
-	/// </summary>
-	internal interface INamedNodeMap
+    /// <summary> Objects implementing the <code>NamedNodeMap</code> interface are used to 
+    /// represent collections of nodes that can be accessed by name. Note that 
+    /// <code>NamedNodeMap</code> does not inherit from <code>NodeList</code>; 
+    /// <code>NamedNodeMaps</code> are not maintained in any particular order. 
+    /// Objects contained in an object implementing <code>NamedNodeMap</code> may 
+    /// also be accessed by an ordinal index, but this is simply to allow 
+    /// convenient enumeration of the contents of a <code>NamedNodeMap</code>, 
+    /// and does not imply that the DOM specifies an order to these Nodes. 
+    /// <p><code>NamedNodeMap</code> objects in the DOM are live.
+    /// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+    /// </summary>
+    internal interface INamedNodeMap
 	{
 		/// <summary> The number of nodes in this map. The range of valid child node indices 
 		/// is <code>0</code> to <code>length-1</code> inclusive. 

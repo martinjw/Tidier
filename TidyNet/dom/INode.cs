@@ -1,5 +1,4 @@
-using System;
-	
+
 /*
 * Copyright (c) 2000 World Wide Web Consortium,
 * (Massachusetts Institute of Technology, Institut National de
@@ -13,25 +12,25 @@ using System;
 */
 namespace TidyNet.Dom
 {
-	/// <summary> The <code>Node</code> interface is the primary datatype for the entire 
-	/// Document Object Model. It represents a single node in the document tree. 
-	/// While all objects implementing the <code>Node</code> interface expose 
-	/// methods for dealing with children, not all objects implementing the 
-	/// <code>Node</code> interface may have children. For example, 
-	/// <code>Text</code> nodes may not have children, and adding children to 
-	/// such nodes results in a <code>DOMException</code> being raised.
-	/// <p>The attributes <code>nodeName</code>, <code>nodeValue</code> and 
-	/// <code>attributes</code> are included as a mechanism to get at node 
-	/// information without casting down to the specific derived interface. In 
-	/// cases where there is no obvious mapping of these attributes for a 
-	/// specific <code>nodeType</code> (e.g., <code>nodeValue</code> for an 
-	/// <code>Element</code> or <code>attributes</code> for a <code>Comment</code>
-	/// ), this returns <code>null</code>. Note that the specialized interfaces 
-	/// may contain additional and more convenient mechanisms to get and set the 
-	/// relevant information.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
-	/// </summary>
-	internal interface INode
+    /// <summary> The <code>Node</code> interface is the primary datatype for the entire 
+    /// Document Object Model. It represents a single node in the document tree. 
+    /// While all objects implementing the <code>Node</code> interface expose 
+    /// methods for dealing with children, not all objects implementing the 
+    /// <code>Node</code> interface may have children. For example, 
+    /// <code>Text</code> nodes may not have children, and adding children to 
+    /// such nodes results in a <code>DOMException</code> being raised.
+    /// <p>The attributes <code>nodeName</code>, <code>nodeValue</code> and 
+    /// <code>attributes</code> are included as a mechanism to get at node 
+    /// information without casting down to the specific derived interface. In 
+    /// cases where there is no obvious mapping of these attributes for a 
+    /// specific <code>nodeType</code> (e.g., <code>nodeValue</code> for an 
+    /// <code>Element</code> or <code>attributes</code> for a <code>Comment</code>
+    /// ), this returns <code>null</code>. Note that the specialized interfaces 
+    /// may contain additional and more convenient mechanisms to get and set the 
+    /// relevant information.
+    /// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+    /// </summary>
+    internal interface INode
 	{
 		/// <summary> The name of this node, depending on its type; see the table above.</summary>
 		string NodeName

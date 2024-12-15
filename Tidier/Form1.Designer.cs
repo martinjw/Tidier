@@ -97,8 +97,8 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabDirectory);
             this.tabControl1.Controls.Add(this.tabFile);
+            this.tabControl1.Controls.Add(this.tabDirectory);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -200,8 +200,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtExtension);
@@ -209,7 +208,7 @@
             this.panel1.Controls.Add(this.btnConvert);
             this.panel1.Location = new System.Drawing.Point(763, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(228, 548);
+            this.panel1.Size = new System.Drawing.Size(239, 548);
             this.panel1.TabIndex = 6;
             // 
             // label1
@@ -237,9 +236,9 @@
             this.chkBackup.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkBackup.Location = new System.Drawing.Point(20, 117);
             this.chkBackup.Name = "chkBackup";
-            this.chkBackup.Size = new System.Drawing.Size(63, 17);
+            this.chkBackup.Size = new System.Drawing.Size(119, 17);
             this.chkBackup.TabIndex = 1;
-            this.chkBackup.Text = "Backup";
+            this.chkBackup.Text = "Backup (x.orig.html)";
             this.chkBackup.UseVisualStyleBackColor = true;
             // 
             // btnConvert
@@ -266,9 +265,8 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(8, 40);
             this.dataGridView1.Name = "dataGridView1";

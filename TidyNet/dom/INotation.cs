@@ -1,5 +1,4 @@
-using System;
-	
+
 /*
 * Copyright (c) 2000 World Wide Web Consortium,
 * (Massachusetts Institute of Technology, Institut National de
@@ -13,18 +12,18 @@ using System;
 */
 namespace TidyNet.Dom
 {
-	/// <summary> This interface represents a notation declared in the DTD. A notation either 
-	/// declares, by name, the format of an unparsed entity (see section 4.7 of 
-	/// the XML 1.0 specification ), or is used for formal declaration of 
-	/// processing instruction targets (see section 2.6 of the XML 1.0 
-	/// specification ). The <code>nodeName</code> attribute inherited from 
-	/// <code>Node</code> is set to the declared name of the notation.
-	/// <p>The DOM Level 1 does not support editing <code>Notation</code> nodes; 
-	/// they are therefore readonly.
-	/// <p>A <code>Notation</code> node does not have any parent.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
-	/// </summary>
-	internal interface INotation : INode
+    /// <summary> This interface represents a notation declared in the DTD. A notation either 
+    /// declares, by name, the format of an unparsed entity (see section 4.7 of 
+    /// the XML 1.0 specification ), or is used for formal declaration of 
+    /// processing instruction targets (see section 2.6 of the XML 1.0 
+    /// specification ). The <code>nodeName</code> attribute inherited from 
+    /// <code>Node</code> is set to the declared name of the notation.
+    /// <p>The DOM Level 1 does not support editing <code>Notation</code> nodes; 
+    /// they are therefore readonly.
+    /// <p>A <code>Notation</code> node does not have any parent.
+    /// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+    /// </summary>
+    internal interface INotation : INode
 	{
 		/// <summary> The public identifier of this notation. If the public identifier was 
 		/// not specified, this is <code>null</code>.

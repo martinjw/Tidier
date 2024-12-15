@@ -1,5 +1,3 @@
-using TidyNet.Dom;
-
 namespace TidyNet
 {
     /// <summary>

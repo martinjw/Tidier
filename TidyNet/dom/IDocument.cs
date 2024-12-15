@@ -1,5 +1,4 @@
-using System;
-	
+
 /*
 * Copyright (c) 2000 World Wide Web Consortium,
 * (Massachusetts Institute of Technology, Institut National de
@@ -13,18 +12,18 @@ using System;
 */
 namespace TidyNet.Dom
 {
-	/// <summary> The <code>Document</code> interface represents the entire HTML or XML 
-	/// document. Conceptually, it is the root of the document tree, and provides 
-	/// the primary access to the document's data.
-	/// <p>Since elements, text nodes, comments, processing instructions, etc. 
-	/// cannot exist outside the context of a <code>Document</code>, the 
-	/// <code>Document</code> interface also contains the factory methods needed 
-	/// to create these objects. The <code>Node</code> objects created have a 
-	/// <code>ownerDocument</code> attribute which associates them with the 
-	/// <code>Document</code> within whose context they were created.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
-	/// </summary>
-	internal interface IDocument : INode
+    /// <summary> The <code>Document</code> interface represents the entire HTML or XML 
+    /// document. Conceptually, it is the root of the document tree, and provides 
+    /// the primary access to the document's data.
+    /// <p>Since elements, text nodes, comments, processing instructions, etc. 
+    /// cannot exist outside the context of a <code>Document</code>, the 
+    /// <code>Document</code> interface also contains the factory methods needed 
+    /// to create these objects. The <code>Node</code> objects created have a 
+    /// <code>ownerDocument</code> attribute which associates them with the 
+    /// <code>Document</code> within whose context they were created.
+    /// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+    /// </summary>
+    internal interface IDocument : INode
 	{
 		/// <summary> The Document Type Declaration (see <code>DocumentType</code>) 
 		/// associated with this document. For HTML documents as well as XML 

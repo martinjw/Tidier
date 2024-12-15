@@ -151,7 +151,11 @@ namespace Tidier
                         {
                             var backUp = Path.Combine(fileInfo.DirectoryName,
                                 Path.GetFileNameWithoutExtension(fileInfo.Name) + ".orig.html");
-                            fileInfo.MoveTo(backUp);
+                            if (!File.Exists(backUp))
+                            {
+                                fileInfo.MoveTo(backUp);
+                            }
+
                         }
                         File.WriteAllText(fullName, html);
                         i++;

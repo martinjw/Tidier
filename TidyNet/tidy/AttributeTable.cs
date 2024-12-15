@@ -1,5 +1,3 @@
-using System;
-using TidyNet.Dom;
 using System.Collections;
 
 namespace TidyNet

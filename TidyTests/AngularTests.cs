@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TidyNet;
+﻿using TidyNet;
 
 namespace TidyTests
 {

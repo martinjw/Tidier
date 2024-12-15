@@ -1,13 +1,12 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace TidyNet
 {
-	/// <summary>
-	/// Collection of TidyMessages
-	/// </summary>
-	[Serializable]
+    /// <summary>
+    /// Collection of TidyMessages
+    /// </summary>
+    [Serializable]
     public class TidyMessageCollection : List<TidyMessage>
 	{
 		/// <summary>

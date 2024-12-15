@@ -94,8 +94,8 @@ namespace Tidier.FormUtils
                         gv.ClearSelection();
                         gv.Rows[hitTestInfo.RowIndex].Selected = true;
                     }
-                    var cm = new ContextMenu(); //rather than ContextMenuStrip
-                    cm.MenuItems.Add("Delete", ContextMenu_Delete);
+                    var cm = new ContextMenuStrip();
+                    cm.Items.Add("Delete", null, ContextMenu_Delete);
                     cm.Show(gv, new System.Drawing.Point(e.X, e.Y));
                 }
             }
@@ -241,12 +241,12 @@ namespace Tidier.FormUtils
         {
             //dragdrop props
             fm.AllowDrop = true;
-            fm.DragEnter += delegate(object sender, DragEventArgs e)
+            fm.DragEnter += delegate (object sender, DragEventArgs e)
             {
                 if (e.Data.GetDataPresent(DataFormats.FileDrop, false))
                     e.Effect = DragDropEffects.All;
             };
-            fm.DragDrop += delegate(object sender, DragEventArgs e)
+            fm.DragDrop += delegate (object sender, DragEventArgs e)
             {
                 var fileList = e.Data.GetData(DataFormats.FileDrop) as string[];
                 AddFiles(fileList);

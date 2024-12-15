@@ -1,5 +1,4 @@
-using System;
-	
+
 /*
 * Copyright (c) 2000 World Wide Web Consortium,
 * (Massachusetts Institute of Technology, Institut National de
@@ -13,14 +12,14 @@ using System;
 */
 namespace TidyNet.Dom
 {
-	/// <summary> The <code>NodeList</code> interface provides the abstraction of an ordered 
-	/// collection of nodes, without defining or constraining how this collection 
-	/// is implemented. <code>NodeList</code> objects in the DOM are live.
-	/// <p>The items in the <code>NodeList</code> are accessible via an integral 
-	/// index, starting from 0.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
-	/// </summary>
-	internal interface INodeList
+    /// <summary> The <code>NodeList</code> interface provides the abstraction of an ordered 
+    /// collection of nodes, without defining or constraining how this collection 
+    /// is implemented. <code>NodeList</code> objects in the DOM are live.
+    /// <p>The items in the <code>NodeList</code> are accessible via an integral 
+    /// index, starting from 0.
+    /// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+    /// </summary>
+    internal interface INodeList
 	{
 		/// <summary> The number of nodes in the list. The range of valid child node indices 
 		/// is 0 to <code>length-1</code> inclusive. 

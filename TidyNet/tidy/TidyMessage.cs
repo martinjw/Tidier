@@ -1,6 +1,4 @@
 using System;
-using System.Resources;
-using System.Reflection;
 
 namespace TidyNet
 {

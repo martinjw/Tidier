@@ -1,5 +1,4 @@
-using System;
-	
+
 /*
 * Copyright (c) 2000 World Wide Web Consortium,
 * (Massachusetts Institute of Technology, Institut National de
@@ -13,16 +12,16 @@ using System;
 */
 namespace TidyNet.Dom
 {
-	/// <summary> Each <code>Document</code> has a <code>doctype</code> attribute whose value 
-	/// is either <code>null</code> or a <code>DocumentType</code> object. The 
-	/// <code>DocumentType</code> interface in the DOM Core provides an interface 
-	/// to the list of entities that are defined for the document, and little 
-	/// else because the effect of namespaces and the various XML schema efforts 
-	/// on DTD representation are not clearly understood as of this writing.
-	/// <p>The DOM Level 2 doesn't support editing <code>DocumentType</code> nodes.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
-	/// </summary>
-	internal interface IDocumentType : INode
+    /// <summary> Each <code>Document</code> has a <code>doctype</code> attribute whose value 
+    /// is either <code>null</code> or a <code>DocumentType</code> object. The 
+    /// <code>DocumentType</code> interface in the DOM Core provides an interface 
+    /// to the list of entities that are defined for the document, and little 
+    /// else because the effect of namespaces and the various XML schema efforts 
+    /// on DTD representation are not clearly understood as of this writing.
+    /// <p>The DOM Level 2 doesn't support editing <code>DocumentType</code> nodes.
+    /// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+    /// </summary>
+    internal interface IDocumentType : INode
 	{
 		/// <summary>The name of DTD; i.e., the name immediately following the 
 		/// <code>DOCTYPE</code> keyword.

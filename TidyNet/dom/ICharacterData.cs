@@ -1,5 +1,4 @@
-using System;
-	
+
 /*
 * Copyright (c) 2000 World Wide Web Consortium,
 * (Massachusetts Institute of Technology, Institut National de
@@ -13,20 +12,20 @@ using System;
 */
 namespace TidyNet.Dom
 {
-	/// <summary> The <code>CharacterData</code> interface extends Node with a set of 
-	/// attributes and methods for accessing character data in the DOM. For 
-	/// clarity this set is defined here rather than on each object that uses 
-	/// these attributes and methods. No DOM objects correspond directly to 
-	/// <code>CharacterData</code>, though <code>Text</code> and others do 
-	/// inherit the interface from it. All <code>offsets</code> in this interface 
-	/// start from <code>0</code>.
-	/// <p>As explained in the <code>DOMString</code> interface, text strings in 
-	/// the DOM are represented in UTF-16, i.e. as a sequence of 16-bit units. In 
-	/// the following, the term 16-bit units is used whenever necessary to 
-	/// indicate that indexing on CharacterData is done in 16-bit units.
-	/// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
-	/// </summary>
-	internal interface ICharacterData : INode
+    /// <summary> The <code>CharacterData</code> interface extends Node with a set of 
+    /// attributes and methods for accessing character data in the DOM. For 
+    /// clarity this set is defined here rather than on each object that uses 
+    /// these attributes and methods. No DOM objects correspond directly to 
+    /// <code>CharacterData</code>, though <code>Text</code> and others do 
+    /// inherit the interface from it. All <code>offsets</code> in this interface 
+    /// start from <code>0</code>.
+    /// <p>As explained in the <code>DOMString</code> interface, text strings in 
+    /// the DOM are represented in UTF-16, i.e. as a sequence of 16-bit units. In 
+    /// the following, the term 16-bit units is used whenever necessary to 
+    /// indicate that indexing on CharacterData is done in 16-bit units.
+    /// <p>See also the <a href='http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113'>Document Object Model (DOM) Level 2 Core Specification</a>.
+    /// </summary>
+    internal interface ICharacterData : INode
 	{
 		/// <summary> The character data of the node that implements this interface. The DOM 
 		/// implementation may not put arbitrary limits on the amount of data 

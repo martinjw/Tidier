@@ -1,10 +1,10 @@
-#A .Net version of HTML Tidy
+# A .Net version of HTML Tidy
 
 This is a fully managed version of HTML Tidy, based on Tidy.Net and updated to Html5.
 
 It is a very old and not very elegant code-base, but it quickly and accurately fixes many HTML problems.
 
-##HTML Tidy
+## HTML Tidy
 
 Dave Raggett's HTML Tidy had two main purposes:
 
@@ -18,13 +18,13 @@ But the original HTML Tidy was written long ago (mostly 2000), and it does not r
 This port was originally written so I could warn about presentational tags and attributes (center, b, align="right" ...)
 Over time, I have also added detection for **some** HTML5.
 
-##History
+## History
 
 The original HTML Tidy project is http://tidy.sourceforge.net/ and has updates until 2008.
 
 Around 2000, a Java port was created and this was in turn ported to C# around 2005 as http://sourceforge.net/projects/tidynet/
 
-This is a port of the TidyNet project, first in .net 3.5/VS2008, now updated to VS2013.
+This is a port of the TidyNet project, first in .net 3.5/VS2008, then updated to VS2013, now to .netStandard 2 and .net8.
 
 I made this port with the following changes:
 
@@ -47,7 +47,7 @@ There are alternatives to this library. There are wrappers around newer versions
 There are newer HTML5 parsers such as Gumbo, which also have c# bindings: https://github.com/rgripper/GumboBindings , Nuget Gumbo.Wrappers
 You could also use Html Agility Pack https://htmlagilitypack.codeplex.com/
 
-##API
+## API
 
 ```C#
 var tidy = new Tidy();
@@ -57,5 +57,5 @@ var tidiedHtml = tidy.Parse(html, messages);
 //check the messages.WarningMessages or messages.ErrorMessages
 ```
 
-##License
+## License
 w3c license http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231

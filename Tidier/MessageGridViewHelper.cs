@@ -77,7 +77,8 @@ namespace Tidier
             var msg = gv.Rows[e.RowIndex].DataBoundItem as TidyMessage;
             if (msg != null)
             {
-                const string notepad = @"C:\Program Files (x86)\Notepad++\Notepad++.exe";
+                string programFiles = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+                string notepad = Path.Combine(programFiles, @"Notepad++\\Notepad++.exe");
                 if (File.Exists(notepad))
                 {
                     Process.Start(notepad, "-n" + msg.Line + " -c" + msg.Column + " " + msg.Filename);
